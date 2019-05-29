@@ -1,0 +1,294 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200vh;
+    font-family: Helvetica;
+    background-color: rgba(0, 0, 0, 0.698);
+}
+
+.header-menu ul li{
+    margin: 0;
+    width: 80%;
+    position: absolute;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    z-index: 2;
+
+}
+
+.left-col, .right-col{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+}
+
+.left-col{
+    background: #d45b48;
+}
+
+.right-col{
+    left: 50%;
+}
+
+.upper{
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background: #4f4538;
+}
+
+.bottom{
+    position: absolute;
+    top:50%;
+    height: 50vh;
+    width: 100%;
+    background: url(media/random1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+@media(max-width: 900px){
+    left-col{
+        width: 100%;
+    }
+
+    .right-col{
+        top: 100%;
+        left: 0%;
+        width: 100%;
+    }
+
+
+}
+
+.logo{
+    font-family: Poppins;
+    color: #fff;
+    position: fixed;
+    margin: 1.4em;
+    font-weight: bolder;
+    z-index: 1;
+}
+
+.year{
+    position: absolute;
+    color: #000;
+    font-family: Poppins;
+    bottom: 8%;
+    font-weight: bolder;
+    transform: rotate(-90deg);
+    left: 0%;
+}
+
+.buy{
+    color: #9a8b78;
+    font-family: Poppins;
+    text-decoration: underline;
+    position: absolute;
+    right: 0%;
+    top: -2.4%;
+    margin:1.4em;
+}
+
+.cover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 50;
+    background: url(media/back1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 2.6s; 
+}
+
+.block-cover img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 50;
+    z-index: 0;
+
+}
+
+.data{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #f4c8ad;
+    font-family: Poppins;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+#name{
+    font-weight: bolder;
+}
+
+.album-name3{
+    color: #000;
+    
+}
+
+#artist{
+    font-size: 10px;
+}
+
+.play, .next ion-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity:0.6;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    padding: 2em; 
+}
+
+.about{
+    position: absolute;
+    top:40%;
+    left:26%;
+    transform: translate(-50%, -50%)
+}
+
+.about h1{
+    font-weight: bolder;
+    color: #6f6457;
+    font-family: Poppins;
+    text-transform: uppercase;
+}
+
+.about p{
+    color: #bcac98;
+    font-family: Poppins;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.about span:hover{
+    text-decoration: underline;
+}
+
+.media ul{
+    position: absolute;
+    list-style: none;
+    left: -24%;
+}
+
+.next{
+    position: absolute;
+    top: 24%;
+    left: 16%;
+}
+
+.data2 #name{
+    position: absolute;
+    top: 24%;
+    left: 28%;
+    color: #f4c8ad;
+    font-family: Poppins;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.more{
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    font-size: 10px;
+    color: #f4c8ad;
+    text-transform: uppercase;
+    font-family: Poppins;
+    text-decoration: underline;
+ }
+
+ .block-cover::after{
+     content: '';
+     top:0;
+     left:0;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: #4f4538;
+     animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+     animation-delay: 2s;
+
+ }
+
+ .block-bottom{
+     margin-top:  100vh;
+ }
+ .london{
+     margin-top: 100vh;
+     height: 100vh;
+     width: 100%;
+     background-color: #d45b48;
+ }
+
+ .london-image{
+     background: url(media/london.jpg) no-repeat;
+     height: 100vh;
+     width: 100px;
+     position: center;
+ }
+
+ .london-box img{
+     height: 300px;
+ }
+
+ .left-image{
+     margin-top: 100vh;
+     background-color: #000;
+     height: 100vh;
+ }
+
+ .left-image img{
+     padding: 0;
+     margin-top: 0;
+     margin-bottom: 100vh;
+     background-color: #000;
+     margin-top: 100vh;
+     height: 300px;
+ }
+ 
+ 
+ @keyframes rev-block{
+
+    0%{
+        left: 0;
+        width: 0%;
+    }
+
+    50%{
+        left: 0;
+        width:100%;
+    }
+
+    100%{
+        left: 100%;
+        width: 0%;
+    }
+
+}
+
+@keyframes appear-text{
+
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
